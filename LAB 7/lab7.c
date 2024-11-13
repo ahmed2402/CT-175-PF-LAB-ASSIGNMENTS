@@ -71,11 +71,33 @@ if (count>=((m*n)/2))
 // return it as full name. Count down number of characters in the full name as well. For example:
 // First name: Muhammad, Second name: Ahmed, Full name: Muhammad Ahmed
 
+#include<stdio.h>
+#include<string.h>
+int main(){
+char firstname[100];
+char lastname[100];
+printf("Enter your first name: ");
+scanf("%s", firstname);
+printf("Enter your last name: ");
+scanf("%s", lastname);
+printf("\nFull name = %s %s",firstname,lastname);
+int count=0;
+for(int i=0;i<strlen(firstname);i++){
+count++;
+}
+for(int j=0;j<strlen(lastname);j++){
+count++;
+}
+printf("\nTotal characters excluding spaces includes :%d", count);
+return 0;
+}
+
 // 4. You taking a square matrix as input from keyboard and then you transpose the same matrix after
 // meeting the requirements you are also interested to find out whether original Matrix A and
 // transpose of Matrix A are equal are not. If the answer is yes, then you print the matrix along with
 // message “matrix is symmetric” otherwise you print the “matrix is asymmetric”.
-// #include <stdio.h>
+
+#include <stdio.h>
 
 int main() {
     int n, i, j, is_symmetric;
